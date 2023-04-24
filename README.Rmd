@@ -30,7 +30,7 @@ library(gtsummary)
 library(psbmisc)
 
 # Set English theme for gtsummary tables
-set_gtsummary_theme(my_theme_en)
+set_gtsummary_theme(my_theme_spa)
 
 # Create a simple tbl_summary
 trial %>%

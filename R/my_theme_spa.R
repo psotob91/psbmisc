@@ -17,7 +17,7 @@
 #' @seealso my_theme_en
 #'
 #' @keywords gtsummary tables custom-theme spanish
-my_theme_spa <- function() {
+my_theme_spa <-
   list(
     # languages
     "pkgwide-str:language" = "es",
@@ -44,4 +44,3 @@ my_theme_spa <- function() {
     "tbl_summary-arg:digits" = list(all_continuous2() ~ 1,
                                     all_categorical() ~ c(0, 1))
   )
-}

@@ -8,7 +8,7 @@
 #' set_gtsummary_theme(my_theme_en)
 #'
 #' @export
-my_theme_en <- function() {
+my_theme_en <-
   list(
     # languages
     "pkgwide-str:language" = "en",
@@ -35,4 +35,3 @@ my_theme_en <- function() {
     "tbl_summary-arg:digits" = list(all_continuous2() ~ 1,
                                     all_categorical() ~ c(0, 1))
   )
-}
