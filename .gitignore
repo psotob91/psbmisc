@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+create_repo_package.R
+inst/
