@@ -16,8 +16,8 @@ This package provides a collection of miscellaneous functions for personal use. 
 
 You can install the development version of `psbmisc` from GitHub with:
 
-```{r} 
-# install.packages("devtools")
+```r 
+install.packages("devtools")
 devtools::install_github("psotob91/psbmisc")
 ```
 
@@ -25,19 +25,48 @@ devtools::install_github("psotob91/psbmisc")
 
 Load the `gtsummary` and `psbmisc` packages:
 
-```{r} 
+```{r, message=FALSE} 
 library(gtsummary)
 library(psbmisc)
-
-# Set English theme for gtsummary tables
-set_gtsummary_theme(my_theme_spa)
-
-# Create a simple tbl_summary
-trial %>%
-  select(age, grade, trt) %>%
-  tbl_summary(by = trt)
 ```
 
+```{r, message=FALSE, echo=FALSE} 
+library(gt)
+library(webshot2)
+```
+
+We can set the prefered `theme`:
+
+```{r} 
+# Set English theme for gtsummary tables
+set_gtsummary_theme(my_theme_en)
+```
+
+And then create the table:
+
+```r
+# Create a tbl_summary
+trial %>%
+  select(age, grade, trt) %>%
+  tbl_summary(by = trt) %>% 
+  add_p(age ~ "t.test") %>% 
+  separate_p_footnotes() %>% 
+  modify_footnote(everything() ~ NA)
+```
+
+```{r, echo=FALSE} 
+# Create a tbl_summary
+trial %>%
+  select(age, grade, trt) %>%
+  tbl_summary(by = trt) %>% 
+  add_p(age ~ "t.test") %>% 
+  separate_p_footnotes() %>% 
+  modify_footnote(everything() ~ NA) %>% 
+  as_gt() %>% 
+  gt::gtsave("img/table.png")
+```
+
+![](img/table.png)
 
 ## Contributors
 

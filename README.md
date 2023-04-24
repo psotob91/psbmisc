@@ -3,51 +3,55 @@
 
 # psbmisc
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of psbmisc is to …
+This package provides a collection of miscellaneous functions for
+personal use. Currently, it includes custom themes for `gtsummary`
+tables in both English and Spanish.
 
 ## Installation
 
-You can install the development version of psbmisc like so:
+You can install the development version of `psbmisc` from GitHub with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+install.packages("devtools")
+devtools::install_github("psotob91/psbmisc")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+Load the `gtsummary` and `psbmisc` packages:
 
 ``` r
+library(gtsummary)
 library(psbmisc)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+We can set the prefered `theme`:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+# Set English theme for gtsummary tables
+set_gtsummary_theme(my_theme_en)
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+And then create the table:
 
-You can also embed plots, for example:
+``` r
+# Create a tbl_summary
+trial %>%
+  select(age, grade, trt) %>%
+  tbl_summary(by = trt) %>% 
+  add_p(age ~ "t.test") %>% 
+  separate_p_footnotes() %>% 
+  modify_footnote(everything() ~ NA)
+```
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+![](img/table.png)
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## Contributors
+
+| Name               | Email                  |
+|--------------------|------------------------|
+| Percy Soto-Becerra | <percys1991@gmail.com> |
+
+## License
+
+MIT + file LICENSE
