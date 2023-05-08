@@ -3,11 +3,17 @@
 #' This function creates a custom theme for gtsummary tables in English.
 #'
 #' @return A list of custom gtsummary theme options.
-#' @importFrom gtsummary style_pvalue all_continuous2 all_categorical bold_labels
-#' @examples
-#' set_gtsummary_theme(my_theme_en)
-#'
+#' @importFrom gtsummary style_pvalue
+#' @importFrom gtsummary all_continuous2
+#' @importFrom gtsummary all_categorical
+#' @importFrom gtsummary set_gtsummary_theme
 #' @export
+#' @examples
+#' gtsummary::set_gtsummary_theme(my_theme_en)
+#'
+#' @seealso my_theme_spa
+#'
+#' @keywords gtsummary tables custom-theme english
 my_theme_en <-
   list(
     # languages

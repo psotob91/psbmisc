@@ -19,7 +19,7 @@ specifying the language, p-values, separators, and various arguments for
 tbl_summary().
 }
 \examples{
-set_gtsummary_theme(my_theme_spa
+gtsummary::set_gtsummary_theme(my_theme_spa)
 
 }
 \seealso{

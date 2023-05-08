@@ -9,10 +9,11 @@
 #' @importFrom gtsummary style_pvalue
 #' @importFrom gtsummary all_continuous2
 #' @importFrom gtsummary all_categorical
+#' @importFrom gtsummary set_gtsummary_theme
 #'
 #' @export
 #' @examples
-#' set_gtsummary_theme(my_theme_spa
+#' gtsummary::set_gtsummary_theme(my_theme_spa)
 #'
 #' @seealso my_theme_en
 #'

@@ -17,7 +17,13 @@ A list of custom gtsummary theme options.
 This function creates a custom theme for gtsummary tables in English.
 }
 \examples{
-set_gtsummary_theme(my_theme_en)
+gtsummary::set_gtsummary_theme(my_theme_en)
 
 }
-\keyword{datasets}
+\seealso{
+my_theme_spa
+}
+\keyword{custom-theme}
+\keyword{english}
+\keyword{gtsummary}
+\keyword{tables}

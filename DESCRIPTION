@@ -1,15 +1,17 @@
 Package: psbmisc
 Title: Miscellaneous Functions for Personal Use
-Version: 0.0.0.9000
-Authors@R: 
-    person("Percy", "Soto-Becerra", , "percys1991@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Version: 0.0.2
+Depends:
+    R (>= 4.3.0)
+Author: Percy Soto-Becerra <psoto@continental.edu.pe> [aut, cre] (<https://orcid.org/0000-0001-5332-9254>)
+Maintainer: Percy Soto-Becerra <psoto@continental.edu.pe>
 Description: This package provides a collection of miscellaneous functions for personal use. Currently, it includes custom themes for `gtsummary` tables in both English and Spanish.
 License: MIT + file LICENSE
-Encoding: UTF-8
 Imports:
-  gtsummary
+    gtsummary (>= 1.7.1)
+Suggests: 
+    roxygen2
+Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-
-
