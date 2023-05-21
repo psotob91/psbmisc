@@ -1,6 +1,6 @@
 Package: psbmisc
 Title: Miscellaneous Functions for Personal Use
-Version: 0.0.2
+Version: 0.0.3
 Depends:
     R (>= 4.3.0)
 Author: Percy Soto-Becerra <psoto@continental.edu.pe> [aut, cre] (<https://orcid.org/0000-0001-5332-9254>)
