@@ -39,8 +39,8 @@ my_theme_spa <-
     "tbl_summary-str:categorical_stat" = "{n} ({p})",
     "tbl_summary-arg:missing_text" = "Datos perdidos",
     "tbl_summary-str:default_con_type" = "continuous2",
-    "tbl_summary-str:header-noby" = "<br>**(n = {N})**",
-    "tbl_summary-str:header-withby" = "**{level}** <br>**(n={n})**",
+    "tbl_summary-str:header-noby" = "Total \n **(n = {N})**",
+    "tbl_summary-str:header-withby" = "**{level}** \n **(n={n})**",
     "tbl_summary-fn:addnl-fn-to-run" = "bold_labels",
     "tbl_summary-arg:digits" = list(all_continuous2() ~ 1,
                                     all_categorical() ~ c(0, 1))
